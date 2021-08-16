@@ -13,7 +13,7 @@ s3 = boto3.client('s3',
                     # aws_session_token=keys.AWS_SESSION_TOKEN
                      )
 
-BUCKET_NAME='flask-source-naveengogu'
+BUCKET_NAME='source-bucket-python-images-naveengogu'
 
 @app.route('/')  
 def home():
