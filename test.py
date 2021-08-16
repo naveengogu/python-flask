@@ -4,8 +4,9 @@ import boto3
 app = Flask(__name__)
 from werkzeug.utils import secure_filename
 # import key_config as keys
+import time
 
-UPLOAD_FOLDER = "/Users/naveengogu/Documents/python_POC/rnd/AWS-Flask2"
+#UPLOAD_FOLDER = "/Users/naveengogu/Documents/python_POC/rnd/AWS-Flask2"
 
 s3 = boto3.client('s3',
                     aws_access_key_id='####',
@@ -32,6 +33,7 @@ def upload():
                     Key = filename
                 )
                 msg = "Upload Done ! "
+                time.sleep(5)
                 # msg = filename
 
     return render_template("file_upload_to_s3.html",filename =filename)
